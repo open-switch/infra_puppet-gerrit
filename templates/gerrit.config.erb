@@ -10,10 +10,6 @@
 	hostname = <%= @mysql_host %>
 	database = reviewdb
 	username = gerrit2
-<% if @database_poollimit != "" -%>
-	poolLimit = <%= @database_poollimit %>
-<% end -%>
-	connectionpool = true
 [auth]
 <% if @gerrit_contributor_agreement -%>
 	contributorAgreements = true
