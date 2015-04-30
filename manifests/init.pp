@@ -26,6 +26,10 @@
 #     The smtp server that Gerrit should send mail through.
 #   sendemail_from:
 #     gerrit.conf value for sendemail.from.
+#   smtpuser:
+#     The smtp user
+#   smtppass:
+#     The smtp password
 #   database_poollimit:
 #   container_heaplimit:
 #   core_packedgitopenfiles:
@@ -128,6 +132,8 @@ class gerrit(
   $email = '',
   $smtpserver = 'localhost',
   $sendemail_from = 'MIXED',
+  $smtpuser = '',
+  $smtppass = '',
   $database_poollimit = '',
   $container_heaplimit = '',
   $core_packedgitopenfiles = '',
@@ -288,6 +294,8 @@ class gerrit(
   # - $ldap_account_email_address
   # - $smtpserver
   # - $sendmail_from
+  # - $smtpuser
+  # - $smtppass
   # - $java_home
   # - $container_heaplimit
   # - $core_packedgitopenfiles
