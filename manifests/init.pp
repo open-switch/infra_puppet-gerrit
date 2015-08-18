@@ -727,6 +727,7 @@ class gerrit(
   }
 
   # Remove libs installed by Gerrit init.
+  if ($::lsbdistcodename != 'precise') {
   tidy { '/home/gerrit2/review_site/lib':
     recurse => true,
     matches => ['bcprov-jdk*.jar',
@@ -735,5 +736,6 @@ class gerrit(
                 'mysql-connector-java-*.jar'],
     require => [Exec['gerrit-initial-init'],
                 Exec['gerrit-init']],
+  }
   }
 }
