@@ -1,4 +1,4 @@
 [gerrit]
-host=review.openstack.org
+host=review.openswitch.net
 port=29418
-project=openstack-infra/puppet-gerrit.git
+project=infra/puppet-gerrit.git

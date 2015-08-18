@@ -120,6 +120,8 @@ class gerrit(
   $gerrit_auth_type = 'OPENID_SSO',
   $gerrit_contributor_agreement = true,
   $openidssourl = 'https://login.launchpad.net/+openid',
+  $oauth_github_client_id = '',
+  $oauth_github_client_secret = '',
   $ldap_server = '',
   $ldap_account_base = '',
   $ldap_username = '',
