@@ -23,9 +23,9 @@ defaultForceUpdate = <%= @replication_force_update %>
 	mirror = <%= replication['mirror'] %>
 <% end -%>
 <% if replication['push'] != nil -%>
-	replicatePermissions = <%= replication['push'] %>
+	push = <%= replication['push'] %>
 <% end -%>
 <% if replication['remoteNameStype'] != nil -%>
-	replicatePermissions = <%= replication['remoteNameStyle'] %>
+	remoteNameStyle = <%= replication['remoteNameStyle'] %>
 <% end -%>
 <% end -%>
