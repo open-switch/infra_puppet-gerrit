@@ -12,7 +12,7 @@
 	username = gerrit2
 [auth]
 <% if @gerrit_contributor_agreement -%>
-	contributorAgreements = false
+	contributorAgreements = true
 <% end -%>
 	type = <%= @gerrit_auth_type %>
 	cookieSecure = true
