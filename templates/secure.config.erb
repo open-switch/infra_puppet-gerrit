@@ -1,4 +1,5 @@
 [database]
 	password = <%= @mysql_password %>
-[auth]
-	registerEmailPrivateKey = <%= @email_private_key %>
+[remote "github"]
+	username = <%= @ops_gerrit_username %>
+	password = <%= @ops_gerrit_password %>
