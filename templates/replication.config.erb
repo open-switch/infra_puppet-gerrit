@@ -25,7 +25,10 @@ defaultForceUpdate = <%= @replication_force_update %>
 <% if replication['push'] != nil -%>
 	push = <%= replication['push'] %>
 <% end -%>
-<% if replication['remoteNameStype'] != nil -%>
+<% if replication['projects'] != nil -%>
+	projects = <%= replication['projects'] %>
+<% end -%>
+<% if replication['remoteNameStyle'] != nil -%>
 	remoteNameStyle = <%= replication['remoteNameStyle'] %>
 <% end -%>
 <% end -%>
