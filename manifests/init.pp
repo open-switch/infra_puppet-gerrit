@@ -99,8 +99,6 @@ class gerrit(
   $mysql_password,
   $war = '',
   $email_private_key = '',
-  $ops_gerrit_username = '',
-  $ops_gerrit_password = '',
   $vhost_name = $::fqdn,
   $canonicalweburl = "https://${::fqdn}/",
   $robots_txt_source = '', # If left empty, the gerrit default will be used.
