@@ -23,10 +23,10 @@ defaultForceUpdate = <%= @replication_force_update %>
 	mirror = <%= replication['mirror'] %>
 <% end -%>
 <% if replication['pushhead'] != nil -%>
-	push = <%= replication['pushhead' %>
+	push = <%= replication['pushhead'] %>
 <% end -%>
 <% if replication['pushtag'] != nil -%>
-	push = <%= replication['pushtag' %>
+	push = <%= replication['pushtag'] %>
 <% end -%>
 <% if replication['projects'] != nil -%>
 	projects = <%= replication['projects'] %>
