@@ -11,6 +11,13 @@ class gerrit::cron {
     environment => 'PATH=/usr/bin:/bin:/usr/sbin:/sbin',
   }
 
+  cron { 'manage_project':
+    user        => 'gerrit2',
+    minute      => '*/30',
+    command     => '/usr/local/bin/manage-projects -v >> /var/log/manage_projects.log 2>&1',
+    require     => [Class['jeepyb'], File['/var/lib/jeepyb']],
+  }
+
   cron { 'expireoldreviews':
     ensure      => 'absent',
     user        => 'gerrit2',
