@@ -3,7 +3,7 @@
 class gerrit::cron {
 
   cron { 'gerrit_repack':
-    user        => 'root',
+    user        => 'gerrit2',
     weekday     => '0',
     hour        => '4',
     minute      => '7',
@@ -12,7 +12,7 @@ class gerrit::cron {
   }
 
   cron { 'manage_project':
-    user        => 'gerrit2',
+    user        => 'root',
     minute      => '*/30',
     command     => '/usr/local/bin/manage-projects -v >> /var/log/manage_projects.log 2>&1',
     require     => [Class['jeepyb'], File['/var/lib/jeepyb']],
