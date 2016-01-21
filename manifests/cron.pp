@@ -3,7 +3,7 @@
 class gerrit::cron {
 
   cron { 'gerrit_repack':
-    user        => 'gerrit2',
+    user        => 'root',
     weekday     => '0',
     hour        => '4',
     minute      => '7',
