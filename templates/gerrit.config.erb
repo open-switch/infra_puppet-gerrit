@@ -126,7 +126,7 @@
 <% else -%>
 	type = cgit
 <% end -%>
-<% if  scope.lookupvar("gerrit::web_repo_url") -%>
+<% if  scope.lookupvar("gerrit::web_repo_url") != "" -%>
 	url = "<%= scope.lookupvar('gerrit::web_repo_url') %>"
 <% end -%>
 <% end -%>
