@@ -15,7 +15,6 @@ class gerrit::cron {
     user        => 'root',
     minute      => '*/30',
     command     => '/usr/local/bin/manage-projects -v >> /var/log/manage_projects.log 2>&1',
-    require     => [Class['jeepyb'], File['/var/lib/jeepyb']],
   }
 
   cron { 'expireoldreviews':
