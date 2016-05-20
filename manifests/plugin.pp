@@ -19,13 +19,13 @@
 
 define gerrit::plugin(
   $version=0,
+  $base_url="http://tarballs.openstack.org/ci/gerrit/plugins/${name}",
 ) {
   $base_plugin       = "${name}.jar"
   $plugin            = "${name}-${version}.jar"
   $plugin_cache_dir  = '/home/gerrit2/gerrit-plugins'
   $plugin_dir        = '/home/gerrit2/review_site/plugins'
   $plugin_parent_dir = '/home/gerrit2/review_site'
-  $base_url          = "http://tarballs.openstack.org/ci/gerrit/plugins/${name}"
 
   include gerrit::user
 
