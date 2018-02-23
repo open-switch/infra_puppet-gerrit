@@ -43,6 +43,7 @@
 [container]
 	user = gerrit2
 	javaHome = <%= @java_home %>
+	javaOptions = "-Dhttps.protocols=TLSv1.1,TLSv1.2"
 <% if @container_heaplimit != "" -%>
 	heapLimit = <%= @container_heaplimit %>
 <% end -%>
